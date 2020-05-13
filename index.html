@@ -16,7 +16,7 @@
 <body>
 
     <ul id="menu">
-        <div style="background-color: rgb(0, 0, 0, 0.8);">
+        <div style="width: 100%; background-color: rgb(0, 0, 0, 0.8);">
             <li data-menuanchor="firstPage"><a href="#firstPage">Home</a></li>
             <li data-menuanchor="secondPage"><a href="#secondPage">About</a></li>
             <li data-menuanchor="3rdPage"><a href="#3rdPage">Skill</a></li>
@@ -45,7 +45,7 @@
                 <span class="intro" style="text-align: left;">
                     <p>제가 프로그래밍 분야를 접하게 된 계기는 <strong>대학교 전공수업을 통하여 C언어를 배우기 시작하면서부터</strong>였습니다.   
                         처음에는 딱딱하고 어렵게 느껴졌던 언어를 배우면서, 차근차근히 제가 원하는 방향으로 구현이 가능함에 흥미를 가지게 되었고, 이후 Java를 공부하며, 
-                        C언어와는 또 달랐던 자바만의 매력적인 부분을 알게 되었습니다.
+                        자바에 빠져들게 되었습니다.
                     </p><br/>
                   
                     <p>제가 <strong>안드로이드 개발자가 되고 싶은 이유</strong>는 비단, 자바를 이용한 프로그래밍이 가능하기 때문만은 아닙니다. 
@@ -109,8 +109,8 @@
                 <br>
                 <h1 style="font-weight: 600; color: black; font-size: 4em;">My Projects</h1>
                 <hr style="margin-left: 42.5%; margin-right: 42.5%; ">
-                <p style="font-size: 1.0em; font-weight: 700;">제가 그 동안 작업한 프로젝트를 소개합니다.</p><br/>
-                <div>
+                <p style="font-size: 1.0em; font-weight: 700;">제가 그 동안 작업한 개인 프로젝트를 소개합니다.</p><br/>
+                <div class="project_container">
                     <div class="projects">
                         <a class="screenshot" href="#4thpage/1">
                             <img src="images/p_mh0.png">
@@ -138,11 +138,11 @@
             </div>
 
             <div class="slide">
-                <h1 style="font-weight: 600; color: rgb(30, 30, 30);; font-size: 3.0em;">Smart MapHack</h1>
-                <hr style="margin-left: 40.5%; margin-right: 40.5%;">
-                <p style="font-size: 1.2em; font-family: inherit; ">( 2019.12.10 ~ 2020.01.10 )</p><br/><br/>
+                <h1 style="font-weight: 600; color: rgb(30, 30, 30); font-size: 3.0em;">Smart MapHack</h1>
+                <hr style="margin-left: 43%; margin-right: 43%;">
+                <p style="font-size: 1.1em; font-weight: 700;">GoogleMap Api를 이용한 Native App</p><br/><br/><br/>
                 <div class="pro_container">
-                    <video id="my-video" class="video-js vjs-big-play-centered demo " controls preload="auto" data-setup='{"playbackRates": [0.5, 1, 1.5, 2] }'>
+                    <video id="my-video" class="video-js vjs-big-play-centered demo " controls preload="auto" poster="images/p_mh1.png" data-setup='{"playbackRates": [0.5, 1, 1.5, 2] }'>
                         <source src="media/demo_maphack.mp4" type="video/mp4" />
                         <p class="vjs-no-js">
                         To view this video please enable JavaScript, and consider upgrading to a
@@ -153,22 +153,27 @@
                     </video>
 
                     <div class="demo_desc">
-
-
-                        <div class="desc_tech">
-                            <h2 style="font-size: 1.2em; font-weight: 700; color: #000;"> - Description</h2><br>
+                        <div class="desc_tech d1">
+                            <h2 class="desc_header"> ▶ Description</h2><br>
                             <div class="enum">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsumdolor sit. Volutpat odio facilisis mauris sit amet
-                                massa. Commodo odio aenean sed adipiscing diam donec Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit
-                                dolor magna eget est lorem ipsumdolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec
+                                ( 2019.12.10 ~ 2020.01.10 )
+                                <br><br> 'Map Api와 Notification, DB를 이용하여 <strong>사용자의 위치정보</strong>와 <strong>길 찾기</strong>를 제공하며, <strong>사용자의 일정을 쉽게 관리해주는 어플</strong>을 만들어보면 어떨까?' 하는 생각으로부터 출발하였습니다.<br><br> 사용자가 등록한 일정은 DB에 등록 후, RecylerView를 통하여 보여지며,
+                                일정 기준에 따라 배치가 이루어지도록 구현 하였습니다.<br><br> 위치정보는 GoogleMap Api와 Place Api가 사용되어, 여기서 제공하는 태그와 위치정보를 가져와 사용하며, 검색버튼 하나하나에 <strong>위치정보 태그를 할당하여 각각의 마커 생성과 삭제 기능을 작동</strong>하게 하였습니다.<br><br> Notification은 일정 등록 후 현재시간과 DB에 등록된
+                                시간을 비교하여 울리게 되며, 터치 시 곧바로 <strong> GoogleMap 길찾기로 이동</strong>하도록 하였습니다.
                             </div>
                         </div>
 
-                        <div class="desc_tech">
-                            <h2 style="font-size: 1.2em; font-weight: 700; color: #000;"> - Tech Stack</h2><br>
-                            <span class="tech_stack">Android</span>
-                            <span class="tech_stack">Java</span>
-                            <span class="tech_stack">SQLite</span>
+                        <div class="desc_tech d1">
+                            <h2 class="desc_header"> ▶ Tech Stack</h2><br>
+                            <span class="tech_stack" style="font-weight: 600;">Map Api</span>
+                            <span class="tech_stack" style="font-weight: 600;">Android</span>
+                            <span class="tech_stack" style="font-weight: 600;">Java</span>
+                            <span class="tech_stack" style="font-weight: 600;">SQLite</span>
+                        </div>
+
+                        <div class="desc_tech d1">
+                            <h2 class="desc_header"> ▶ Source Code</h2><br>
+                            <span class="tech_stack" style="font-weight: 600;"><a href="#">GitHub</a></span>
                         </div>
                     </div>
                 </div>
@@ -176,10 +181,10 @@
 
             <div class="slide">
                 <h1 style="font-weight: 600; color: rgb(30, 30, 30); font-size: 3.0em;">Basket Battle</h1>
-                <hr style="margin-left: 42.5%; margin-right: 42.5%;">
-                <p style="font-size: 1.2em; font-weight: 700;">( 2020.3.10? ~ 2020.04.18? )</p><br/><br/>
+                <hr style="margin-left: 44%; margin-right: 44%;">
+                <p style="font-size: 1.1em; font-weight: 700;">Web과 Native의 기능이 합쳐진 App</p><br/><br/><br/>
                 <div class="pro_container">
-                    <video id="my-video" class="video-js vjs-big-play-centered demo" controls preload="auto" data-setup='{"playbackRates": [0.5, 1, 1.5, 2] }'>
+                    <video id="my-video" class="video-js vjs-big-play-centered demo" controls preload="auto" poster="images/p_bb1.png" data-setup='{"playbackRates": [0.5, 1, 1.5, 2] }'>
                         <source src="media/demo_basketbattle.mp4" type="video/mp4" />
                         <p class="vjs-no-js">
                         To view this video please enable JavaScript, and consider upgrading to a
@@ -190,21 +195,26 @@
                     </video>
 
                     <div class="demo_desc">
-                        <div class="desc_tech">
-                            <h1 style="font-size: 1.2em; font-weight: 700; color: #000;"> - Description</h1><br>
+                        <div class="desc_tech d2">
+                            <h2 class="desc_header"> ▶ Description</h2><br>
                             <div class="enum">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsumdolor sit. Volutpat odio facilisis mauris sit amet
-                                massa. Commodo odio aenean sed adipiscing diam donec Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit
-                                dolor magna eget est lorem ipsumdolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec
+                                ( 2020.3.10? ~ 2020.04.18? )<br><br> 홈 쇼핑을 자주 이용하는 사용자들에 맞춰서, 원하는 상품을 <strong>앱에 간편하게 등록</strong>하고, 이에 대한 <strong>결정을 도와주는 과정</strong>을 '재미있게 표현할 수 있지 않을까?' 하는 생각으로부터 시작되었습니다.<br><br> Android의 WebView에서 보여지는, 홈쇼핑 몰(옥션,
+                                위메프 등) 혹은 다른 웹 사이트에서 사용자가 원하는 항목을 어플의 등록버튼을 통하여 등록하면, 이를 Java의 <strong>JSoup라이브러리</strong>를 통하여 해당 웹 페이지의 <strong>CSS내부의 OpenGraph 태그</strong>의 정보를 가져오게 함 으로써 이를 안드로이드 내
+                                <Strong>SQ-Lite에 저장</Strong>합니다.<br><br> 상품 선택 기능은 Native쪽의 DB에 저장된 정보를 <strong>JSON객체로 변환</Strong>하여 이를 Web이 받아서 처리하며, JQuery를 통한 알고리즘 및 JQuery-Ui를 사용하여 애니메이션을 구현하였습니다. 최종으로 처리된 결과는 다시 Web에서 Native로 전달되어 반영됩니다.
                             </div>
                         </div>
 
-                        <div class="desc_tech">
-                            <h2 style="font-size: 1.2em; font-weight: 700; color: #000;"> - Tech Stack</h2><br>
-                            <span class="tech_stack">Android</span>
-                            <span class="tech_stack">Java</span>
-                            <span class="tech_stack">SQLite</span>
-                            <span class="tech_stack">JQuery</span>
+                        <div class="desc_tech d2">
+                            <h2 class="desc_header"> ▶ Tech Stack</h2><br>
+                            <span class="tech_stack" style="font-weight: 600;">Android</span>
+                            <span class="tech_stack" style="font-weight: 600;">Java</span>
+                            <span class="tech_stack" style="font-weight: 600;">SQ-Lite</span>
+                            <span class="tech_stack" style="font-weight: 600;">J-Query</span>
+                        </div>
+
+                        <div class="desc_tech d2">
+                            <h2 class="desc_header d2"> ▶ Source Code</h2><br>
+                            <span class="tech_stack" style="font-weight: 600;"><a href="#">GitHub</a></span>
                         </div>
                     </div>
                 </div>
@@ -215,7 +225,11 @@
         <!--연락-->
         <div class="section" id="section4">
             <h1 style="font-weight: 600; color: black; font-size: 4em;">Contact Me</h1>
-            <hr style="margin-left: 42%; margin-right: 42%; ">
+            <hr style="margin-left: 43%; margin-right: 43%; ">
+            <p style="font-size: 1.1em;"><strong>Tel.&nbsp;</strong> 010 - 5730 - 9178</p>
+            <p style="font-size: 1.1em;"><strong>Mail.&nbsp;</strong> kjk899@naver.com</p>
+            <p style="font-size: 1.1em;"><strong>&nbsp;&nbsp;&nbsp;&nbsp;GitHub.&nbsp;</strong> <a href="https://github.com/jacim3">https://github.com/jacim3</a></p>
+
         </div>
     </div>
 
@@ -251,6 +265,31 @@
                     clearInterval(timer);
                 }
             }, 1000);
+
+            var timer2 = setInterval(function() {
+                var elementClass = $('body').attr('class');
+                if (elementClass == "fp-viewing-4thpage-1" || elementClass == "fp-responsive fp-viewing-4thpage-1") {
+
+                    $('.d1').eq(0).fadeIn(500);
+                    $('.d1').eq(1).delay(500).fadeIn(500);
+                    $('.d1').eq(2).delay(1000).fadeIn(500);
+
+                    clearInterval(timer2);
+                }
+            }, 1000);
+
+            var timer3 = setInterval(function() {
+                var elementClass = $('body').attr('class');
+                if (elementClass == "fp-viewing-4thpage-2" || elementClass == "fp-responsive fp-viewing-4thpage-2") {
+
+                    $('.d2').eq(0).fadeIn(500);
+                    $('.d2').eq(1).delay(750).fadeIn(500);
+                    $('.d2').eq(2).delay(1500).fadeIn(500);
+
+                    clearInterval(timer3);
+                }
+            }, 1000);
+
         });
         var data = [{
             'tool': 'C·Language',
@@ -266,11 +305,11 @@
             'color': '#88da74'
         }, {
             'tool': 'My·SQL',
-            'skill': 40,
+            'skill': 35,
             'color': '#4479a1'
         }, {
             'tool': 'HTML',
-            'skill': 40,
+            'skill': 50,
             'color': '#f16529'
         }, {
             'tool': 'CSS',
@@ -311,6 +350,63 @@
             $(this).animate({
                 'opacity': 0.2
             }, 300);
+        });
+
+        $('.desc_tech').hover(function(index) {
+            index = $(this).index();
+            var elementCla = $('body').attr('class');
+            if (elementCla == "fp-viewing-4thpage-1") {
+                for (var i = 0; i < 3; i++) {
+                    if (i == index) {
+                        $('.d1').eq(i).stop().css({
+                            'transform': 'scale(1.8)'
+                        });
+                        $('.demo').stop().animate({
+                            'left': -225,
+                            'top': -100
+                        });
+                        $('.fp-prev').stop().fadeOut();
+                        $('.fp-next').stop().fadeOut();
+                    } else {
+                        $('.d1').eq(i).stop().animate({
+                            'opacity': 0.1
+                        });
+                    }
+                }
+            } else {
+                for (var i = 0; i < 3; i++) {
+                    if (i == index) {
+                        $('.d2').eq(i).stop().css({
+                            'transform': 'scale(1.8)'
+                        });
+                        $('.demo').stop().animate({
+                            'left': -225,
+                            'top': -100
+                        });
+                        $('.fp-prev').stop().fadeOut();
+                        $('.fp-next').stop().fadeOut();
+                    } else {
+                        $('.d2').eq(i).stop().animate({
+                            'opacity': 0.1
+                        });
+                    }
+                }
+            }
+        }, function(index) {
+            $('.desc_tech').stop().css({
+                'transform': 'scale(1)',
+                'z-index': '-1'
+            }).animate({
+                'opacity': '1'
+            }, 500);
+
+            $('.demo').stop().animate({
+                'left': 0,
+                'top': 0
+            });
+
+            $('.fp-prev').stop().fadeIn(500);
+            $('.fp-next').stop().fadeIn(500);
         });
     </script>
     <script src="https://vjs.zencdn.net/7.7.5/video.js"></script>

@@ -1,44 +1,16 @@
-.avia_video {
-    background-color: #ffffff !important;
+a:link {
+    color: red;
+    text-decoration: none;
 }
 
-.video-js {
-    background-color: transparent;
+a:visited {
+    color: black;
+    text-decoration: none;
 }
 
-html.html_stretched.responsive.av-default-lightbox.html_header_top.html_logo_left.html_main_nav_header.html_menu_right.html_large.html_header_sticky_disabled.html_header_shrinking_disabled.html_header_topbar_active.html_mobile_menu_phone.html_disabled.html_entry_id_6094.avia_desktop.js_active.avia_transform.avia_transform3d.avia_transform.avia_transform3d.avia-webkit.avia-webkit-36.avia-windows {
-    background: #ffffff !important;
-}
-
-html,
-#scroll-top-link {
-    background: #ffffff !important;
-}
-
-#top .av-section-with-video-bg .av-section-video-bg:after,
-.av-click-overlay {
-    content: "." !important;
-    background: #ffffff !important;
-}
-
-.html {
-    background-color: #ffffff !important;
-}
-
-.avia_video {
-    background-color: #ffffff !important;
-}
-
-.video-js {
-    background-color: #ffffff !important;
-}
-
-#top .av-video-slide .avia-slide-wrap {
-    background: #ffffff !important;
-}
-
-#top .av-video-slide .avia-slide-wrap {
-    background: transparent url("../images/layout/preload-dark-grey-big.gif") no-repeat center center !important;
+a:hover {
+    color: yellowgreen;
+    text-decoration: none;
 }
 
 #actions {
@@ -50,10 +22,6 @@ html,
 
 #menu {
     width: 100%;
-}
-
-#menu>li {
-    margin-right: 0;
 }
 
 #actions a {
@@ -72,7 +40,7 @@ html,
 .paragraph {
     width: 81%;
     height: 50%;
-    margin: 0 auto 10%;
+    margin: 0 auto 5%;
 }
 
 #actions a:hover {
@@ -115,7 +83,7 @@ html,
     overflow: hidden;
     line-height: 2.3em;
     font-size: 0.8em;
-    padding-right: 5%;
+    padding-right: 20%;
     display: block;
     text-align: right;
     border-radius: 10px;
@@ -127,7 +95,7 @@ html,
     height: 50px;
     float: left;
     border-radius: 3px;
-    box-shadow: 2px 2px 2px 2px rgb(219, 219, 219);
+    box-shadow: 2px 2px 2px 2px rgb(117, 117, 117);
 }
 
 .projects {
@@ -136,10 +104,16 @@ html,
     opacity: 0.2;
 }
 
+.project_container {
+    margin-top: 2%;
+}
+
 .projects img {
     margin-left: 1%;
-    margin-bottom: 1%;
-    box-shadow: 3px 3px 3px 3px rgb(95, 95, 95);
+    margin-bottom: 1.5%;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
     display: inline-block;
     width: 12%;
 }
@@ -147,46 +121,54 @@ html,
 .pro_container {
     width: 70%;
     height: 70%;
-    margin: 0 auto;
+    margin: 0 10%;
 }
 
 .demo {
-    width: 30%;
-    height: 90%;
+    width: 27%;
+    height: 99.2%;
     margin-left: 10%;
-    margin-top: 3%;
     float: left;
+    -webkit-box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 1);
 }
 
 .demo_desc {
     border-radius: 5px;
-    width: 40%;
-    height: 40%;
+    width: 50%;
     float: left;
     margin-left: 10%;
-    margin-top: 5%;
     text-align: left;
     color: rgb(46, 46, 46);
+}
+
+.desc_header {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #000;
 }
 
 .tech_stack {
     border: 1px solid rgb(216, 215, 215);
     box-shadow: 1px 1px 1px 1px #999;
     border-radius: 5px;
-    color: rgb(46, 46, 46);
+    color: rgb(66, 66, 66);
     padding: 5px;
     margin-left: 5px;
 }
 
 .desc_tech {
+    background-color: #fff;
     border-radius: 5px;
-    border: 1px solid rgb(216, 215, 215);
-    box-shadow: 1px 1px 1px 1px #999;
-    padding: 15px 10px;
-    height: fit-content;
-    margin-bottom: 5%;
-}
-
-.enum {
-    text-indent: 15px;
+    -webkit-box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 12px -5px rgba(0, 0, 0, 1);
+    font-size: 0.9em;
+    width: 100%;
+    padding: 4%;
+    margin-bottom: 3%;
+    display: none;
+    transition: transform .5s ease-out;
+    z-index: 0;
 }
