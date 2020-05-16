@@ -1507,6 +1507,16 @@
          */
         var prevTime = new Date().getTime();
 
+        function getPageName() {
+            var pageName = "";
+
+            var tempPageName = window.location.href;
+            var strPageName = tempPageName.split("/");
+            pageName = strPageName[strPageName.length - 1].split("?")[0].split("#")[1];
+
+            return pageName;
+        }
+
         function MouseWheelHandler(e) {
             var curTime = new Date().getTime();
             var isNormalScroll = hasClass($(COMPLETELY_SEL)[0], NORMAL_SCROLL);
@@ -1515,6 +1525,18 @@
             if (!isScrollAllowed.m.down && !isScrollAllowed.m.up) {
                 preventDefault(e);
                 return false;
+            }
+
+
+
+            if ($body.className == "fp-viewing-secondPage" || $body.className == "fp-viewing-5thpage") {
+                setTimeout(function() {
+                    if (getPageName() == "firstPage")
+                        document.getElementById('menu').style.backgroundColor = "#ffffff";
+                }, 100);
+
+            } else {
+                document.getElementById('menu').style.backgroundColor = "#000000";
             }
 
             //autoscrolling and not zooming?
